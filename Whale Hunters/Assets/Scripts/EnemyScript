@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyScript : MonoBehaviour
+{
+    [Tooltip("endurance = base damage done")]
+    public int estrength;
+    [Tooltip("endurance = health")]
+    public int eendurance;
+    [Tooltip("agility = movespeed")]
+    public int eagility;
+    [Tooltip("atk-speed, as it says on the tin")]
+    public int firerate;
+    [Tooltip("Current hp")]
+    public int ecurhealth;
+    //[Tooltip("basehp for monsters, only apply if enemy healers are implemented")]
+    //public int basehp = 100;
+    
+    
+    #endregion
+    #region statfunctions
+    public void golem()
+    {
+        estrength = 1;
+        eendurance = 1;
+        eagility = 1;
+        eproficiency = 1;
+        float v1 = Random.Range(0f, 1f);
+        float v2 = Random.Range(0f, 1f);
+        float v3 = Random.Range(0f, 1f);
+        float v4 = Random.Range(0f, 1f);
+        strength += (int)((distributablestats + 1) * v1);
+        endurance += (int)((distributablestats + 1) * v2);
+        agility += (int)((distributablestats + 1) * v3);
+        proficiency += (int)((distributablestats + 1) * v4);
+    }
+  
+    #endregion
+}
